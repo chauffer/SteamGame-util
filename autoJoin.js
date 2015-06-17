@@ -6,6 +6,7 @@
 // EXAMPLE:
 // tj = 44660;
 
+
 var tj = -1;
 
 function leaveCurrentGame( callback )
@@ -28,8 +29,9 @@ function tryJoinRoom()
 {
 	if(tj == -1)
 		return;
-  clearInterval(tryTimer);
-
+		
+	clearInterval( tryTimer );
+  
 	leaveCurrentGame();
 }
  
@@ -63,5 +65,5 @@ function betterJoinGameID()
 		}
 	);
 }
-setInterval( tryJoinRoom, 1000 );
+var tryTimer = setInterval( tryJoinRoom, 1000 );
 tryJoinRoom();
