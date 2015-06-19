@@ -1,3 +1,8 @@
-47030 Reddit x/SG1
-47050 Reddit x/SG2
-47051 Reddit 1
+47000 Reddit 1
+47020 Reddit 2
+47030 Reddit 3/SG1
+47038 Reddit 4
+47039 Reddit 5
+47039 Reddit 5
+47050 SG2
+47090 Reddit 8
