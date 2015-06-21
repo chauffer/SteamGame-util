@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name	chauffer Steam Game AutoJoin
 // @namespace	https://github.com/chauffer/SteamGameAutoJoin/
-// @version	3.3
+// @version	3.5.1
 // @description	Auto-join script for 2015 Summer Steam Monster Minigame
 // @author	geekahedron
 // @match	*://steamcommunity.com/minigame
@@ -11,6 +11,10 @@
 // @downloadURL	https://raw.githubusercontent.com/chauffer/SteamGameAutoJoin/master/autojoin.user.js
 // @grant	none
 // ==/UserScript==
+
+// This script is from geekahedron
+// I put this in my repo because I use this myself, I link it to others, and I don't trust geekahedron.
+// Please refrain from flaming. It's a couple of lines of Free Software.
 
 //NOTE: This REQUIRES the use of GreaseMonkey or TamperMonkey
 (function(w) {
@@ -132,7 +136,7 @@ function HandleJoinError(roomlist, gameid, count, code, msg)
 	{
 		case 25:	// room full
 			console.log( code + ' Error joining game ' + gameid + ': it already has the maximum number of players.' );
-			if (getPreferenceBoolean("tryFullRooms", false) === true)
+			if (getPreferenceBoolean("tryFullRooms", true) != false)
 			{
 				JoinGameLoop(rooms, count+1 );
 			} else {
@@ -187,7 +191,7 @@ function HandleJoinError(roomlist, gameid, count, code, msg)
 				}
 				else if (msg.search("maximum number of players") != -1)
 				{
-					if (getPreferenceBoolean("tryFullRooms", false) === true)
+					if (getPreferenceBoolean("tryFullRooms", true) != false)
 						{
 						JoinGameLoop(rooms, count+1 );
 					} else {
