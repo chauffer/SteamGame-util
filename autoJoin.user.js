@@ -7,8 +7,6 @@
 // @match	*://steamcommunity.com/minigame
 // @match	*://steamcommunity.com//minigame
 // @match	http://steamcommunity.com/minigame/*
-// @updateURL	https://raw.githubusercontent.com/chauffer/SteamGameAutoJoin/master/autojoin.user.js
-// @downloadURL	https://raw.githubusercontent.com/chauffer/SteamGameAutoJoin/master/autojoin.user.js
 // @grant	none
 // ==/UserScript==
 
